@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="commalindah.httpsgithub.averagefinder.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Please enter at most 20 numbers to average in the input below.\nWhen you want to add a number, press the Add button. When you want to calculate the average, press the Calculate button."
+                android:textSize="16sp"
+                android:padding="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_number_input"
+                android:layout_below="@+id/tv_information"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:inputType="numberDecimal"
+                android:hint="Please enter a number"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_add_number"
+                android:layout_below="@id/et_number_input"
+                android:text="Add Number"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:onClick="addNumToArray"
+                android:layout_margin="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_calculate_average"
+                android:layout_below="@id/btn_add_number"
+                android:layout_centerHorizontal="true"
+                android:text="Calculate Average"
+                android:textSize="16sp"
+                android:onClick="calcAverage"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_error_message"
+                android:layout_below="@id/btn_calculate_average"
+                android:padding="30dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_display_average"
+                android:layout_alignTop="@id/tv_error_message"
+                android:padding="30dp"
+                android:textSize="22sp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
